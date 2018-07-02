@@ -6,6 +6,10 @@ import (
 
 // ReadRune reads a single UTF-8 encoded Unicode character from an io.Reader,
 // and returns the Unicode character (as a Go rune) and the number of bytes read.
+//
+// Note that a single UTF-8 encoded Unicode character could be more than one byte.
+//
+// For example, the Unicode "≡" (IDENTICAL TO) character gets encoded using 3 bytes under UTF-8.
 func ReadRune(reader io.Reader) (rune, int, error) {
 	if nil == reader {
 		return 0, 0, errNilReader
