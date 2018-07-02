@@ -4,7 +4,7 @@ package utf8s
 func Len(r rune) int {
 
 	switch {
-	case 127 > r:
+	case 127 >= r:
 		return 1
 
 	case 0x7FF >= r:
