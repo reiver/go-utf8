@@ -5,8 +5,10 @@ import (
 )
 
 // WriteRune writes a single UTF-8 encoded Unicode character and returns the number of bytes written.
-func WriteRune(w io.Writer, r rune) (int, error) {
-
+func WriteRune(writer io.Writer, r rune) (int, error) {
+	if nil == writer {
+		return 0, errNilWriter
+	}
 
 	switch {
 	case 127 >= r:
@@ -16,7 +18,7 @@ func WriteRune(w io.Writer, r rune) (int, error) {
 
 		p := buffer[:]
 
-		return w.Write(p)
+		return writer.Write(p)
 
 	case 0x7FF >= r:
 		var buffer [2]byte
@@ -26,7 +28,7 @@ func WriteRune(w io.Writer, r rune) (int, error) {
 
 		p := buffer[:]
 
-		return w.Write(p)
+		return writer.Write(p)
 
 	case 0xFFFF >= r:
 		var buffer [3]byte
@@ -37,7 +39,7 @@ func WriteRune(w io.Writer, r rune) (int, error) {
 
 		p := buffer[:]
 
-		return w.Write(p)
+		return writer.Write(p)
 
 	case 0x10FFFF >= r:
 		var buffer [4]byte
@@ -49,7 +51,7 @@ func WriteRune(w io.Writer, r rune) (int, error) {
 
 		p := buffer[:]
 
-		return w.Write(p)
+		return writer.Write(p)
 
 	default:
 		return 0, errInternalError
