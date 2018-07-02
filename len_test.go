@@ -42,6 +42,82 @@ func TestLen(t *testing.T) {
 			Datum:   '🙂',
 			Expected: 4,
 		},
+
+
+
+		{
+			Datum:   '\u0000',
+			Expected: 1,
+		},
+		{
+			Datum:   '\u0001',
+			Expected: 1,
+		},
+		{
+			Datum:   '\u007e',
+			Expected: 1,
+		},
+		{
+			Datum:   '\u007f',
+			Expected: 1,
+		},
+
+
+
+		{
+			Datum:   '\u0080',
+			Expected: 2,
+		},
+		{
+			Datum:   '\u0081',
+			Expected: 2,
+		},
+		{
+			Datum:   '\u07fe',
+			Expected: 2,
+		},
+		{
+			Datum:   '\u07ff',
+			Expected: 2,
+		},
+
+
+
+		{
+			Datum:   '\u0800',
+			Expected: 3,
+		},
+		{
+			Datum:   '\u0801',
+			Expected: 3,
+		},
+		{
+			Datum:   '\ufffe',
+			Expected: 3,
+		},
+		{
+			Datum:   '\uffff',
+			Expected: 3,
+		},
+
+
+
+		{
+			Datum:   '\U00010000',
+			Expected: 4,
+		},
+		{
+			Datum:   '\U00010001',
+			Expected: 4,
+		},
+		{
+			Datum:   '\U0010fffe',
+			Expected: 4,
+		},
+		{
+			Datum:   '\U0010ffff',
+			Expected: 4,
+		},
 	}
 
 
