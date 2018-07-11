@@ -596,3 +596,65 @@ func TestRuneScanners(t *testing.T) {
 		}
 	}
 }
+
+func TestRuneScannerUnread(t *testing.T) {
+
+	tests := []struct{
+		Reader io.Reader
+		Instructions []rune
+		ExpectedRune []rune
+		ExpectedSize []int
+	}{
+		{
+			Reader: strings.NewReader("a ≡ b\r\n۰۱۲۳۴۵۶۷۸۹ \U00010001"),
+			Instructions: []rune{'r', 'u', 'r', 'u', 'u', 'r', 'r', 'u', 'r', 'r', 'u', 'r', 'u', 'u', 'r', 'r', 'r',  'r',  'r', 'r', 'r', 'r', 'r', 'r', 'r', 'u', 'u', 'u', 'r', 'r', 'r', 'r', 'r', 'r', 'r'},
+			ExpectedRune: []rune{'a',      'a',           'a', ' ',      ' ', '≡',      '≡',           '≡', ' ', 'b', '\r', '\n', '۰', '۱', '۲', '۳', '۴', '۵',                '۵', '۶', '۷', '۸', '۹', ' ', '\U00010001'},
+			ExpectedSize: []int{  1,        1,             1,   1,        1,   3,        3,             3,   1,   1,    1,    1,   2,   2,   2,   2,   2,   2,                  2,   2,   2,   2,   2,   1,   4},
+		},
+	}
+
+
+	TestLoop: for testNumber, test := range tests {
+
+		runeScanner := NewRuneScanner(test.Reader)
+
+		var readCount int
+		for instructionNumber, instruction := range test.Instructions {
+
+			switch instruction {
+			case 'r': // =   rea
+
+				actualRune, actualSize, err := runeScanner.ReadRune()
+				if nil != err {
+					t.Errorf("For test #%d and instruction #%d, did not expected an error, but actually got one: (%T) %q", testNumber, instructionNumber, err, err)
+					continue TestLoop
+				}
+
+				expectedRune := test.ExpectedRune[readCount]
+				expectedSize := test.ExpectedSize[readCount]
+
+				if expected, actual := expectedRune, actualRune; expected != actual {
+					t.Errorf("For test #%d and instruction #%d, expected rune %q / %d, but actually got %q / %d", testNumber, instructionNumber, expected, expected, actual, actual)
+					continue TestLoop
+				}
+
+				if expected, actual := expectedSize, actualSize; expected != actual {
+					t.Errorf("For test #%d and instruction #%d, for rune %q / %d expected size %d, but actually got size %d", testNumber, instructionNumber, expectedRune, expectedRune, expected, actual)
+					continue TestLoop
+				}
+
+				readCount++
+			case 'u': // = unread
+				if err := runeScanner.UnreadRune(); nil != err {
+					t.Errorf("For test #%d and instruction #%d, did not expected an error, but actually got one: (%T) %q", testNumber, instructionNumber, err, err)
+					continue TestLoop
+				}
+			default:
+				t.Errorf("For test #%d and instruction #%d, UNKNOWN INSTRUCTION!!!:... %q", testNumber, instructionNumber, instruction)
+				continue TestLoop
+			}
+
+		}
+
+	}
+}
