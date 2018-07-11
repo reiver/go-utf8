@@ -43,3 +43,19 @@ runeReader := utf8s.NewRuneReader(reader)
 
 r, n, err := runeReader.ReadRune()
 ```
+
+```go
+var reader io.Reader
+
+// ...
+
+runeScanner := utf8s.NewRuneScanner(reader)
+
+// ...
+
+r, n, err := runeScanner.ReadRune()
+
+// ...
+
+err = runeScanner.UnreadRune()
+```
