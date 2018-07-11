@@ -1,6 +1,6 @@
 # go-utf8s
 
-Package **utf8s** provides tools provides tools for working with Unicode encoded as UTF-8, for the Go programming language.
+Package **utf8s** provides tools for working with Unicode encoded as UTF-8, for the Go programming language.
 
 
 ## Documention
