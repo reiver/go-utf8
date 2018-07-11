@@ -16,6 +16,10 @@ func NewRuneReader(reader io.Reader) *RuneReader {
 }
 
 func (receiver *RuneReader) ReadRune() (rune, int, error) {
+	if nil == receiver {
+		return 0, 0, errNilReceiver
+	}
+
 	reader := receiver.reader
 	if nil == reader {
 		return 0, 0, errNilReader
