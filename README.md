@@ -31,3 +31,15 @@ var r rune
 
 n, err := utf8s.WriteRune(w, r)
 ```
+
+```go
+var reader io.Reader
+
+// ...
+
+runeReader := utf8s.NewRuneReader(reader)
+
+// ...
+
+r, n, err := runeReader.ReadRune()
+```

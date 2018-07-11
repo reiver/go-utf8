@@ -26,6 +26,19 @@ Example
 
 Example
 
+	var reader io.Reader
+	
+	// ...
+	
+	runeReader := utf8s.NewRuneReader(reader)
+	
+	// ..
+	
+	r, n, err := runeReader.ReadRune()
+
+
+Example
+
 	var r rune
 	
 	// ...
