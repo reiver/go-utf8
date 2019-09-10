@@ -23,12 +23,12 @@ func NewRuneScanner(reader io.Reader) *RuneScanner {
 
 func (receiver *RuneScanner) ReadRune() (rune, int, error) {
 	if nil == receiver {
-		return 0, 0, errNilReceiver
+		return RuneError, 0, errNilReceiver
 	}
 
 	reader := receiver.reader
 	if nil == reader {
-		return 0, 0, errNilReader
+		return RuneError, 0, errNilReader
 	}
 
 	if receiver.peeked {
