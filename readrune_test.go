@@ -291,6 +291,24 @@ func TestReadRune(t *testing.T) {
 			ExpectedRune:  0x10ffff,
 			ExpectedInt:   4,
 		},
+
+
+
+		{
+			Reader: strings.NewReader("\u0085"), // next line
+			ExpectedRune:  0x0085,
+			ExpectedInt:   2,
+		},
+		{
+			Reader: strings.NewReader("\u2028"), // line separator
+			ExpectedRune:  0x2028,
+			ExpectedInt:   3,
+		},
+		{
+			Reader: strings.NewReader("\u2029"), // paragraph separator
+			ExpectedRune:  0x2029,
+			ExpectedInt:   3,
+		},
 	}
 
 
