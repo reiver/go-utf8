@@ -1,28 +1,28 @@
-package utf8s
+package utf8
 
 // Len returns the number of bytes in a UTF-8 encoding of this Unicode code point.
 //
 // Example
 //
-//	length := utf8s.Len('A')
+//	length := utf8.Len('A')
 //
 //	// length == 1
 //
 // Example
 //
-//	length := utf8s.Len('r')
+//	length := utf8.Len('r')
 //
 //	// length == 1
 //
 // Example
 //
-//	length := utf8s.Len('¡')
+//	length := utf8.Len('¡')
 //
 //	// length == 2
 //
 // Example
 //
-//	length := utf8s.Len('۵')
+//	length := utf8.Len('۵')
 //
 //	// length == 2
 func Len(r rune) int {

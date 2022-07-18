@@ -1,4 +1,4 @@
-package utf8s
+package utf8
 
 type InvalidUTF8Complainer interface {
 	error

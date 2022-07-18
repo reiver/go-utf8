@@ -1,5 +1,5 @@
 /*
-Package utf8s provides tools for working with Unicode encoded as UTF-8.
+Package utf8 provides tools for working with Unicode encoded as UTF-8.
 
 
 Example
@@ -8,7 +8,7 @@ Example
 	
 	// ...
 	
-	r, n, err := utf8s.ReadRune(reader)
+	r, n, err := utf8.ReadRune(reader)
 
 
 Example
@@ -21,7 +21,7 @@ Example
 	
 	// ...
 	
-	n, err := utf8s.WriteRune(w, r)
+	n, err := utf8.WriteRune(w, r)
 
 
 Example
@@ -30,7 +30,7 @@ Example
 	
 	// ...
 	
-	runeReader := utf8s.NewRuneReader(reader)
+	runeReader := utf8.NewRuneReader(reader)
 	
 	// ..
 	
@@ -43,7 +43,7 @@ Example
 	
 	// ...
 	
-	runeScanner := utf8s.NewRuneScanner(reader)
+	runeScanner := utf8.NewRuneScanner(reader)
 	
 	// ...
 	
@@ -120,4 +120,4 @@ This is done as described in the following table:
 	└────────────┴───────────────────────┴────────────────┴──────────────────┴──────────┴──────────┴──────────┴──────────┘
 
 */
-package utf8s
+package utf8

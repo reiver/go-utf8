@@ -1,4 +1,4 @@
-package utf8s
+package utf8
 
 import (
 	"bytes"
@@ -8,7 +8,7 @@ import (
 //
 // Example
 //
-//	utf8s.FormatBinary('۵')
+//	utf8.FormatBinary('۵')
 //	
 //	// Outputs:
 //	// <<0b11011011 ; 0b10110101>>

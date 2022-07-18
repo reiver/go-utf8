@@ -1,6 +1,6 @@
 # go-utf8
 
-Package **utf8s** provides tools for working with Unicode encoded as UTF-8, for the Go programming language.
+Package **utf8** provides tools for working with Unicode encoded as UTF-8, for the Go programming language.
 
 
 ## Documention
@@ -17,7 +17,7 @@ var reader io.Reader
 
 // ...
 
-r, n, err := utf8s.ReadRune(reader)
+r, n, err := utf8.ReadRune(reader)
 ```
 
 ```go
@@ -29,7 +29,7 @@ var r rune
 
 // ...
 
-n, err := utf8s.WriteRune(w, r)
+n, err := utf8.WriteRune(w, r)
 ```
 
 ```go
@@ -37,7 +37,7 @@ var reader io.Reader
 
 // ...
 
-runeReader := utf8s.NewRuneReader(reader)
+runeReader := utf8.NewRuneReader(reader)
 
 // ...
 
@@ -49,7 +49,7 @@ var reader io.Reader
 
 // ...
 
-runeScanner := utf8s.NewRuneScanner(reader)
+runeScanner := utf8.NewRuneScanner(reader)
 
 // ...
 

@@ -1,10 +1,10 @@
-package utf8s
+package utf8
 
 import (
 	"io"
 )
 
-// A utf8s.RuneReader implements the io.RuneReader interface by reading from an io.Reader.
+// A utf8.RuneReader implements the io.RuneReader interface by reading from an io.Reader.
 type RuneReader struct {
 	reader io.Reader
 }
