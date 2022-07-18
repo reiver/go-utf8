@@ -1,9 +1,5 @@
 package utf8s
 
-import (
-	"unicode/utf8"
-)
-
 const (
-	RuneError = utf8.RuneError
+	RuneError = '\uFFFD' // Unicode Replacement Character (U+FFFD).
 )

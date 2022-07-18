@@ -1,13 +1,13 @@
-# go-utf8s
+# go-utf8
 
 Package **utf8s** provides tools for working with Unicode encoded as UTF-8, for the Go programming language.
 
 
 ## Documention
 
-Online documentation, which includes examples, can be found at: http://godoc.org/github.com/reiver/go-utf8s
+Online documentation, which includes examples, can be found at: http://godoc.org/github.com/reiver/go-utf8
 
-[![GoDoc](https://godoc.org/github.com/reiver/go-utf8s?status.svg)](https://godoc.org/github.com/reiver/go-utf8s)
+[![GoDoc](https://godoc.org/github.com/reiver/go-utf8?status.svg)](https://godoc.org/github.com/reiver/go-utf8)
 
 
 ## Example

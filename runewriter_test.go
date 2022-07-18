@@ -1,7 +1,7 @@
 package utf8s_test
 
 import (
-	"github.com/reiver/go-utf8s"
+	"github.com/reiver/go-utf8"
 
 	"strings"
 
