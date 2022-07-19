@@ -9,9 +9,9 @@ type RuneWriter struct {
 	writer io.Writer
 }
 
-// NewRuneWriter wraps an io.Writer and returns a RuneWriter.
-func NewRuneWriter(writer io.Writer) *RuneWriter {
-	return &RuneWriter{
+// RuneWriterWrap wraps an io.Writer and returns a RuneWriter.
+func RuneWriterWrap(writer io.Writer) RuneWriter {
+	return RuneWriter{
 		writer: writer,
 	}
 }
