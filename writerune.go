@@ -5,6 +5,24 @@ import (
 )
 
 // WriteRune writes a single UTF-8 encoded Unicode character and returns the number of bytes written.
+//
+// If ‘writer’ is nil then WriteRune will return an error that matches utf8.WriteRune.
+//
+// Example
+//
+// Here is an example usage of WriteRune:
+//
+//	n, err := utf8.WriteRune(writer, r)
+//	if nil != err {
+//		
+//		switch err.(type) {
+//		case utf8.NilWriterComplainer:
+//			//@TODO
+//		default:
+//			//TODO
+//		}
+//		
+//	}
 func WriteRune(writer io.Writer, r rune) (int, error) {
 	if nil == writer {
 		return 0, errNilWriter
@@ -56,5 +74,4 @@ func WriteRune(writer io.Writer, r rune) (int, error) {
 	default:
 		return 0, errInternalError
 	}
-
 }
