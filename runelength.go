@@ -1,31 +1,31 @@
 package utf8
 
-// Len returns the number of bytes in a UTF-8 encoding of this Unicode code point.
+// RuneLength returns the number of bytes in a UTF-8 encoding of this Unicode code point.
 //
 // Example
 //
-//	length := utf8.Len('A')
+//	length := utf8.RuneLength('A')
 //
 //	// length == 1
 //
 // Example
 //
-//	length := utf8.Len('r')
+//	length := utf8.RuneLength('r')
 //
 //	// length == 1
 //
 // Example
 //
-//	length := utf8.Len('¡')
+//	length := utf8.RuneLength('¡')
 //
 //	// length == 2
 //
 // Example
 //
-//	length := utf8.Len('۵')
+//	length := utf8.RuneLength('۵')
 //
 //	// length == 2
-func Len(r rune) int {
+func RuneLength(r rune) int {
 
 	switch {
 	case 127 >= r:
