@@ -7,6 +7,28 @@ import (
 // ReadRune reads a single UTF-8 encoded Unicode character from an io.Reader,
 // and returns the Unicode character (as a Go rune) and the number of bytes read.
 //
+// If ‘reader’ is nil then ReaderRune will return an error that matches utf8.NilReaderComplainer.
+//
+// Example
+//
+// Here is an example usage of ReadRune:
+//
+//      r, n, err := utf8.ReadRune(reader)
+//      if nil != err {
+//
+//              switch err.(type) {
+//              case utf8.NilReaderComplainer:
+//                      //@TODO
+//              case utf8.InvalidUTF8Complainer:
+//                      //@TODO
+//              default:
+//                      //TODO
+//              }
+//
+//      }
+//
+// Number Of Bytes
+//
 // Note that a single UTF-8 encoded Unicode character could be more than one byte.
 //
 // For example, the Unicode "≡" (IDENTICAL TO) character gets encoded using 3 bytes under UTF-8.

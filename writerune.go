@@ -6,7 +6,7 @@ import (
 
 // WriteRune writes a single UTF-8 encoded Unicode character and returns the number of bytes written.
 //
-// If ‘writer’ is nil then WriteRune will return an error that matches utf8.WriteRune.
+// If ‘writer’ is nil then WriteRune will return an error that matches utf8.NilWriterComplainer.
 //
 // Example
 //
