@@ -24,8 +24,10 @@ import (
 //              default:
 //                      //TODO
 //              }
-//
 //      }
+//	if utf8.RuneError == r {
+//		//@TODO
+//	}
 //
 // Number Of Bytes
 //
