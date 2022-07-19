@@ -585,7 +585,7 @@ func TestRuneReaders(t *testing.T) {
 				t.Errorf("\tACTUAL:   %s", FormatBinary(actualRune))
 				continue TestLoop
 			}
-			if expected, actual := Len(test.Expected[runeNumber]), actualInt; expected != actual {
+			if expected, actual := RuneLength(test.Expected[runeNumber]), actualInt; expected != actual {
 				t.Errorf("For test #%d and rune #%d, expected %d, but actually got %d.", testNumber, runeNumber, expected, actual)
 				t.Errorf("\tEXPECTED: %s", FormatBinary(test.Expected[runeNumber]))
 				t.Errorf("\tACTUAL:   %s", FormatBinary(actualRune))

@@ -73,7 +73,7 @@ func TestRuneWriter(t *testing.T) {
 				continue TestLoop
 			}
 
-			if expected, actual := n, utf8.Len(r); expected != actual {
+			if expected, actual := n, utf8.RuneLength(r); expected != actual {
 				t.Errorf("For test #%d and rune #%d, expected a certain number of bytes to be written, but actually wasn't.", testNumber, runeNumber)
 				for i, rr := range test.Runes {
 					t.Logf("\t[%d] %q (%d)", i, string(rr), rr)
