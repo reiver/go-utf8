@@ -37,7 +37,7 @@ var reader io.Reader
 
 // ...
 
-runeReader := utf8.NewRuneReader(reader)
+runeReader := utf8.RuneReaderWrap(reader)
 
 // ...
 
@@ -49,7 +49,7 @@ var reader io.Reader
 
 // ...
 
-runeScanner := utf8.NewRuneScanner(reader)
+runeScanner := utf8.RuneScannerWrap(reader)
 
 // ...
 

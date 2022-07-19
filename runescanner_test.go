@@ -295,7 +295,7 @@ func TestRuneScanner(t *testing.T) {
 
 
 	for testNumber, test := range tests {
-		runeReader := NewRuneScanner(test.Reader)
+		runeReader := RuneScannerWrap(test.Reader)
 
 		actualRune, actualInt, err := runeReader.ReadRune()
 		if nil != err {
@@ -563,7 +563,7 @@ func TestRuneScanners(t *testing.T) {
 
 		var runeNumber int
 		for {
-			runeReader := NewRuneScanner(test.Reader)
+			runeReader := RuneScannerWrap(test.Reader)
 
 			actualRune, actualInt, err := runeReader.ReadRune()
 			if nil != err && io.EOF != err {
@@ -616,7 +616,7 @@ func TestRuneScannerUnread(t *testing.T) {
 
 	TestLoop: for testNumber, test := range tests {
 
-		runeScanner := NewRuneScanner(test.Reader)
+		runeScanner := RuneScannerWrap(test.Reader)
 
 		var readCount int
 		for instructionNumber, instruction := range test.Instructions {

@@ -30,7 +30,7 @@ Example
 	
 	// ...
 	
-	runeReader := utf8.NewRuneReader(reader)
+	runeReader := utf8.RuneReaderWrap(reader)
 	
 	// ..
 	
@@ -43,7 +43,7 @@ Example
 	
 	// ...
 	
-	runeScanner := utf8.NewRuneScanner(reader)
+	runeScanner := utf8.RuneScannerWrap(reader)
 	
 	// ...
 	

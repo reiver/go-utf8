@@ -15,8 +15,8 @@ type RuneScanner struct {
 	peeked bool
 }
 
-func NewRuneScanner(reader io.Reader) *RuneScanner {
-	return &RuneScanner{
+func RuneScannerWrap(reader io.Reader) RuneScanner {
+	return RuneScanner{
 		reader: reader,
 	}
 }

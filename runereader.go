@@ -9,8 +9,8 @@ type RuneReader struct {
 	reader io.Reader
 }
 
-func NewRuneReader(reader io.Reader) *RuneReader {
-	return &RuneReader{
+func RuneReaderWrap(reader io.Reader) RuneReader {
+	return RuneReader{
 		reader: reader,
 	}
 }
