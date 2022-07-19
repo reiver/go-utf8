@@ -4,7 +4,7 @@ import (
 	"testing"
 )
 
-func TestLen(t *testing.T) {
+func TestRuneLength(t *testing.T) {
 
 	tests := []struct{
 		Datum rune
@@ -123,7 +123,7 @@ func TestLen(t *testing.T) {
 
 	for testNumber, test := range tests {
 
-		actual := Len(test.Datum)
+		actual := RuneLength(test.Datum)
 		if expected := test.Expected; expected != actual {
 			t.Errorf("For test #%d, expected %d, but actually got %d.", testNumber, expected, actual)
 			continue
