@@ -81,7 +81,7 @@ Some examples of UTF-8 encoding of Unicode code points are:
 <table>
 	<thead>
 		<tr>
-			<td colspan="4">UTF-8 encoding</td>
+			<td colspan="4" align="center">UTF-8 encoding</td>
 			<td rowspan="2">value</td>
 			<td rowspan="2">code point</td>
 			<td rowspan="2">decimal</td>
