@@ -152,15 +152,15 @@ Some examples of UTF-8 encoding of Unicode code points are:
 			<td>PER TEN THOUSAND SIGN</td>
 		</tr>
 		<tr>
-			<td><code></code></td>
-			<td><code></code></td>
-			<td><code></code></td>
-			<td><code></code></td>
+			<td><code>0b1110,0010</code></td>
+			<td><code>0b10,001001</code></td>
+			<td><code>0b10,100001</code></td>
 			<td></td>
-			<td></td>
-			<td></td>
-			<td><code></code></td>
-			<td></td>
+			<td>≡</td>
+			<td>U+2261</td>
+			<td>8801</td>
+			<td><code>0b0010,0010,0110,0001</code></td>
+			<td>IDENTICAL TO</td>
 		</tr>
 		<tr>
 			<td><code></code></td>
