@@ -163,15 +163,15 @@ Some examples of UTF-8 encoding of Unicode code points are:
 			<td>IDENTICAL TO</td>
 		</tr>
 		<tr>
-			<td><code></code></td>
-			<td><code></code></td>
-			<td><code></code></td>
-			<td><code></code></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td><code></code></td>
-			<td></td>
+			<td><code>0b11110,000</code></td>
+			<td><code>0b10,010000</code></td>
+			<td><code>0b10,001111</code></td>
+			<td><code>0b10,010101</code></td>
+			<td>𐏕</td>
+			<td>U+000103D5</td>
+			<td>66517</td>
+			<td><code>b0001,0000,0011,1101,0101</code></td>
+			<td>OLD PERSIAN NUMBER HUNDRED</td>
 		</tr>
 		<tr>
 			<td><code></code></td>
