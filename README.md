@@ -141,15 +141,15 @@ Some examples of UTF-8 encoding of Unicode code points are:
 			<td>EXTENDED ARABIC-INDIC DIGIT FIVE</td>
 		</tr>
 		<tr>
-			<td><code></code></td>
-			<td><code></code></td>
-			<td><code></code></td>
-			<td><code></code></td>
+			<td><code>0b1110,0010</code></td>
+			<td><code>0b10,000000</code></td>
+			<td><code>0b10,110001</code></td>
 			<td></td>
-			<td></td>
-			<td></td>
-			<td><code></code></td>
-			<td></td>
+			<td>‱</td>
+			<td>U+2031</td>
+			<td>8241</td>
+			<td><code>0b0010,0000,0011,0001</code></td>
+			<td>PER TEN THOUSAND SIGN</td>
 		</tr>
 		<tr>
 			<td><code></code></td>
