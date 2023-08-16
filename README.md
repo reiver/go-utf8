@@ -96,6 +96,102 @@ Some examples of UTF-8 encoding of Unicode code points are:
 		</tr>
 	</thead>
 	<tbody>
+		<tr>
+			<td><code>0b0,1000001</code></td>
+			<td><code></code></td>
+			<td><code></code></td>
+			<td><code></code></td>
+
+			<td></td>
+			<td></td>
+			<td></td>
+			<td><code></code></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td><code>0b0,1110010</code></td>
+			<td><code></code></td>
+			<td><code></code></td>
+			<td><code></code></td>
+
+			<td></td>
+			<td></td>
+			<td></td>
+			<td><code></code></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td><code>0b110,00010</code></td>
+			<td><code>0b10,100001</code></td>
+			<td><code></code></td>
+			<td><code></code></td>
+
+			<td></td>
+			<td></td>
+			<td></td>
+			<td><code></code></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td><code>0b110,11011</code></td>
+			<td><code>0b10,110101</code></td>
+			<td><code></code></td>
+			<td><code></code></td>
+
+			<td></td>
+			<td></td>
+			<td></td>
+			<td><code></code></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td><code></code></td>
+			<td><code></code></td>
+			<td><code></code></td>
+			<td><code></code></td>
+
+			<td></td>
+			<td></td>
+			<td></td>
+			<td><code></code></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td><code></code></td>
+			<td><code></code></td>
+			<td><code></code></td>
+			<td><code></code></td>
+
+			<td></td>
+			<td></td>
+			<td></td>
+			<td><code></code></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td><code></code></td>
+			<td><code></code></td>
+			<td><code></code></td>
+			<td><code></code></td>
+
+			<td></td>
+			<td></td>
+			<td></td>
+			<td><code></code></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td><code></code></td>
+			<td><code></code></td>
+			<td><code></code></td>
+			<td><code></code></td>
+
+			<td></td>
+			<td></td>
+			<td></td>
+			<td><code></code></td>
+			<td></td>
+		</tr>
 	</tbody>
 </table>
 
