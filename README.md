@@ -98,9 +98,9 @@ Some examples of UTF-8 encoding of Unicode code points are:
 	<tbody>
 		<tr>
 			<td><code>0b0,1000001</code></td>
-			<td><code></code></td>
-			<td><code></code></td>
-			<td><code></code></td>
+			<td></td>
+			<td></td>
+			<td></td>
 			<td>A</td>
 			<td>U+0041</td>
 			<td>65</td>
@@ -109,9 +109,9 @@ Some examples of UTF-8 encoding of Unicode code points are:
 		</tr>
 		<tr>
 			<td><code>0b0,1110010</code></td>
-			<td><code></code></td>
-			<td><code></code></td>
-			<td><code></code></td>
+			<td></td>
+			<td></td>
+			<td></td>
 			<td>r</td>
 			<td>U+0072</td>
 			<td>114</td>
@@ -123,11 +123,11 @@ Some examples of UTF-8 encoding of Unicode code points are:
 			<td><code>0b10,100001</code></td>
 			<td><code></code></td>
 			<td><code></code></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td><code></code></td>
-			<td></td>
+			<td>¡</td>
+			<td>U+00A1</td>
+			<td>161</td>
+			<td><code>0b0000,0000,1010,0001</code></td>
+			<td>INVERTED EXCLAMATION MARK</td>
 		</tr>
 		<tr>
 			<td><code>0b110,11011</code></td>
