@@ -78,6 +78,27 @@ An encoding of a single Unicode code point can be from 1 to 4 bytes longs.
 
 Some examples of UTF-8 encoding of Unicode code points are:
 
+<table>
+	<thead>
+		<tr>
+			<td colspan="4">UTF-8 encoding</td>
+			<td rowspan="2">value</td>
+			<td rowspan="2">code point</td>
+			<td rowspan="2">decimal</td>
+			<td rowspan="2">binary</td>
+			<td rowspan="2">name</td>
+		</tr>
+		<tr>
+			<td>byte 1</td>
+			<td>byte 2</td>
+			<td>byte 3</td>
+			<td>byte 4</td>
+		</tr>
+	</thead>
+	<tbody>
+	</tbody>
+</table>
+
 ```
 ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━┳━━━━━━━━━━━━┳━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
 |                    UTF-8 encoding                     |       |            |         |                            |                                  |
