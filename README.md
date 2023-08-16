@@ -101,22 +101,22 @@ Some examples of UTF-8 encoding of Unicode code points are:
 			<td><code></code></td>
 			<td><code></code></td>
 			<td><code></code></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td><code></code></td>
-			<td></td>
+			<td>A</td>
+			<td>U+0041</td>
+			<td>65</td>
+			<td><code>0b0000,0000,0100,0001</code></td>
+			<td>LATIN CAPITAL LETTER A</td>
 		</tr>
 		<tr>
 			<td><code>0b0,1110010</code></td>
 			<td><code></code></td>
 			<td><code></code></td>
 			<td><code></code></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td><code></code></td>
-			<td></td>
+			<td>r</td>
+			<td>U+0072</td>
+			<td>114</td>
+			<td><code>0b0000,0000,0111,0010</code></td>
+			<td>LATIN SMALL LETTER R</td>
 		</tr>
 		<tr>
 			<td><code>0b110,00010</code></td>
