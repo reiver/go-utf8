@@ -134,11 +134,11 @@ Some examples of UTF-8 encoding of Unicode code points are:
 			<td><code>0b10,110101</code></td>
 			<td><code></code></td>
 			<td><code></code></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td><code></code></td>
-			<td></td>
+			<td>۵</td>
+			<td>U+06F5</td>
+			<td>1781</td>
+			<td><code>0b0000,0110,1111,0101</code></td>
+			<td>EXTENDED ARABIC-INDIC DIGIT FIVE</td>
 		</tr>
 		<tr>
 			<td><code></code></td>
