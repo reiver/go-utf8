@@ -121,8 +121,8 @@ Some examples of UTF-8 encoding of Unicode code points are:
 		<tr>
 			<td><code>0b110,00010</code></td>
 			<td><code>0b10,100001</code></td>
-			<td><code></code></td>
-			<td><code></code></td>
+			<td></td>
+			<td></td>
 			<td>¡</td>
 			<td>U+00A1</td>
 			<td>161</td>
