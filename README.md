@@ -174,15 +174,15 @@ Some examples of UTF-8 encoding of Unicode code points are:
 			<td>OLD PERSIAN NUMBER HUNDRED</td>
 		</tr>
 		<tr>
-			<td><code></code></td>
-			<td><code></code></td>
-			<td><code></code></td>
-			<td><code></code></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td><code></code></td>
-			<td></td>
+			<td><code>0b11110,000</code></td>
+			<td><code>0b10,011111</code></td>
+			<td><code>0b10,011001</code></td>
+			<td><code>0b10,000010</code></td>
+			<td>🙂</td>
+			<td>U+0001F642</td>
+			<td>128578</td>
+			<td><code>0b0001,1111,0110,0100,0010</code></td>
+			<td>SLIGHTLY SMILING FACE</td>
 		</tr>
 	</tbody>
 </table>
