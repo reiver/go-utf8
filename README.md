@@ -101,7 +101,6 @@ Some examples of UTF-8 encoding of Unicode code points are:
 			<td><code></code></td>
 			<td><code></code></td>
 			<td><code></code></td>
-
 			<td></td>
 			<td></td>
 			<td></td>
@@ -113,7 +112,6 @@ Some examples of UTF-8 encoding of Unicode code points are:
 			<td><code></code></td>
 			<td><code></code></td>
 			<td><code></code></td>
-
 			<td></td>
 			<td></td>
 			<td></td>
@@ -125,7 +123,6 @@ Some examples of UTF-8 encoding of Unicode code points are:
 			<td><code>0b10,100001</code></td>
 			<td><code></code></td>
 			<td><code></code></td>
-
 			<td></td>
 			<td></td>
 			<td></td>
@@ -137,7 +134,6 @@ Some examples of UTF-8 encoding of Unicode code points are:
 			<td><code>0b10,110101</code></td>
 			<td><code></code></td>
 			<td><code></code></td>
-
 			<td></td>
 			<td></td>
 			<td></td>
@@ -149,7 +145,6 @@ Some examples of UTF-8 encoding of Unicode code points are:
 			<td><code></code></td>
 			<td><code></code></td>
 			<td><code></code></td>
-
 			<td></td>
 			<td></td>
 			<td></td>
@@ -161,7 +156,6 @@ Some examples of UTF-8 encoding of Unicode code points are:
 			<td><code></code></td>
 			<td><code></code></td>
 			<td><code></code></td>
-
 			<td></td>
 			<td></td>
 			<td></td>
@@ -173,7 +167,6 @@ Some examples of UTF-8 encoding of Unicode code points are:
 			<td><code></code></td>
 			<td><code></code></td>
 			<td><code></code></td>
-
 			<td></td>
 			<td></td>
 			<td></td>
@@ -185,7 +178,6 @@ Some examples of UTF-8 encoding of Unicode code points are:
 			<td><code></code></td>
 			<td><code></code></td>
 			<td><code></code></td>
-
 			<td></td>
 			<td></td>
 			<td></td>
