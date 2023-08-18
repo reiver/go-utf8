@@ -45,7 +45,7 @@ var reader io.Reader
 
 // ...
 
-var runeReader io.RuneReader = utf8.RuneReaderWrap(reader)
+var runeReader io.RuneReader = utf8.NewRuneReader(reader)
 
 // ...
 
@@ -60,7 +60,7 @@ var reader io.Reader
 
 // ...
 
-var runeScanner io.RuneScanner := utf8.RuneScannerWrap(reader)
+var runeScanner io.RuneScanner := utf8.NewRuneScanner(reader)
 
 // ...
 

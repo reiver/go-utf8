@@ -4,6 +4,8 @@ import (
 	"io"
 )
 
+var _ io.RuneScanner = NewRuneScanner(nil)
+
 // A utf8.RuneScanner implements the io.RuneScanner interface by reading from an io.Reader.
 type RuneScanner struct {
 	reader io.Reader
@@ -15,10 +17,16 @@ type RuneScanner struct {
 	peeked bool
 }
 
-func RuneScannerWrap(reader io.Reader) RuneScanner {
+func WrapRuneScanner(reader io.Reader) RuneScanner {
 	return RuneScanner{
 		reader: reader,
 	}
+}
+
+func NewRuneScanner(reader io.Reader) *RuneScanner {
+	var runescanner RuneScanner = WrapRuneScanner(reader)
+
+	return &runescanner
 }
 
 func (receiver *RuneScanner) ReadRune() (rune, int, error) {

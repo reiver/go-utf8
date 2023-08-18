@@ -295,7 +295,7 @@ func TestRuneReader(t *testing.T) {
 
 
 	for testNumber, test := range tests {
-		runeReader := RuneReaderWrap(test.Reader)
+		runeReader := WrapRuneReader(test.Reader)
 
 		actualRune, actualInt, err := runeReader.ReadRune()
 		if nil != err {
@@ -563,7 +563,7 @@ func TestRuneReaders(t *testing.T) {
 
 		var runeNumber int
 		for {
-			runeReader := RuneReaderWrap(test.Reader)
+			runeReader := WrapRuneReader(test.Reader)
 
 			actualRune, actualInt, err := runeReader.ReadRune()
 			if nil != err && io.EOF != err {

@@ -58,7 +58,7 @@ func TestRuneWriter(t *testing.T) {
 		var buffer strings.Builder
 		var total int
 
-		runeWriter := utf8.RuneWriterWrap(&buffer)
+		runeWriter := utf8.WrapRuneWriter(&buffer)
 
 		for runeNumber, r := range test.Runes {
 
