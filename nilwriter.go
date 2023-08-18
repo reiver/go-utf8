@@ -1,16 +1,16 @@
 package utf8
 
-type NilWriterComplainer interface {
+type NilWriterError interface {
 	error
-	NilWriterComplainer()
+	NilWriterError()
 }
 
-type internalNilWriterComplainer struct{}
+type internalNilWriterError struct{}
 
-func (complainer internalNilWriterComplainer) Error() string {
+func (complainer internalNilWriterError) Error() string {
 	return "Nil Writer"
 }
 
-func (complainer internalNilWriterComplainer) NilWriterComplainer() {
+func (complainer internalNilWriterError) NilWriterError() {
 	// Nothing here.
 }

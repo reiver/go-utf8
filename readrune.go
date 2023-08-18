@@ -7,7 +7,7 @@ import (
 // ReadRune reads a single UTF-8 encoded Unicode character from an io.Reader,
 // and returns the Unicode character (as a Go rune) and the number of bytes read.
 //
-// If ‘reader’ is nil then ReaderRune will return an error that matches utf8.NilReaderComplainer.
+// If ‘reader’ is nil then ReaderRune will return an error that matches utf8.NilReaderError.
 //
 // Example
 //
@@ -17,9 +17,9 @@ import (
 //      if nil != err {
 //
 //              switch err.(type) {
-//              case utf8.NilReaderComplainer:
+//              case utf8.NilReaderError:
 //                      //@TODO
-//              case utf8.InvalidUTF8Complainer:
+//              case utf8.InvalidUTF8Error:
 //                      //@TODO
 //              default:
 //                      //TODO

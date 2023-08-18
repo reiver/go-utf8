@@ -1,6 +1,6 @@
 package utf8
 
-// InvalidUTF8Complainer is a type of error that could be returned
+// InvalidUTF8Error is a type of error that could be returned
 // by the utf8.ReadRune() function,
 // by the utf8.RuneReader.ReadRune() method, and
 // by the utf8.RuneScanner.ReadRune() method.
@@ -10,23 +10,23 @@ package utf8
 //	r, n, err := utf8.ReadRune(reader)
 //	if nil != err {
 //		switch {
-//		case utf8.InvalidUTF8Complainer:
+//		case utf8.InvalidUTF8Error:
 //			//@TODO
 //		default:
 //			//@TODO
 //		}
 //	}
-type InvalidUTF8Complainer interface {
+type InvalidUTF8Error interface {
 	error
-	InvalidUTF8Complainer()
+	InvalidUTF8Error()
 }
 
-type internalInvalidUTF8Complainer struct{}
+type internalInvalidUTF8Error struct{}
 
-func (complainer internalInvalidUTF8Complainer) Error() string {
+func (complainer internalInvalidUTF8Error) Error() string {
 	return "Invalid UTF-8"
 }
 
-func (complainer internalInvalidUTF8Complainer) InvalidUTF8Complainer() {
+func (complainer internalInvalidUTF8Error) InvalidUTF8Error() {
 	// Nothing here.
 }

@@ -1,16 +1,16 @@
 package utf8
 
-type NilReaderComplainer interface {
+type NilReaderError interface {
 	error
-	NilReaderComplainer()
+	NilReaderError()
 }
 
-type internalNilReaderComplainer struct{}
+type internalNilReaderError struct{}
 
-func (complainer internalNilReaderComplainer) Error() string {
+func (complainer internalNilReaderError) Error() string {
 	return "Nil Reader"
 }
 
-func (complainer internalNilReaderComplainer) NilReaderComplainer() {
+func (complainer internalNilReaderError) NilReaderError() {
 	// Nothing here.
 }

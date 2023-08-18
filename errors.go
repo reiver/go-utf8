@@ -6,8 +6,8 @@ import (
 
 var (
 	errInternalError = errors.New("Internal Error")
-	errInvalidUTF8   = internalInvalidUTF8Complainer{}
-	errNilReader     = internalNilReaderComplainer{}
+	errInvalidUTF8   = internalInvalidUTF8Error{}
+	errNilReader     = internalNilReaderError{}
 	errNilReceiver   = errors.New("Nil Receiver")
-	errNilWriter     = internalNilWriterComplainer{}
+	errNilWriter     = internalNilWriterError{}
 )
