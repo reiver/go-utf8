@@ -37,7 +37,11 @@ func NewRuneScanner(reader io.Reader) *RuneScanner {
 //
 // So, for example, if .UnreadRune() was called for the rune 'A' (U+0041), then .Buffered() would return 1.
 //
-// And, for example, if .UnreadRune() was called for the rune '🙂' (U+1F642), then .Buffered() would return 4.
+// Also, for example, if .UnreadRune() was called for the rune '۵' (U+06F5), then .Buffered() would return 2.
+//
+// And, for example, if .UnreadRune() was called for the rune '≡' (U+2261), then .Buffered() would return 3.
+//
+// And also, for example, if .UnreadRune() was called for the rune '🙂' (U+1F642), then .Buffered() would return 4.
 //
 // This method has been made to be semantically the same as bufio.Reader.Buffered()
 func (receiver *RuneScanner) Buffered() int {
