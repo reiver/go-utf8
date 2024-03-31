@@ -612,3 +612,117 @@ func TestReadRunes(t *testing.T) {
 		}
 	}
 }
+
+func TestReadRune_nilReader(t *testing.T) {
+
+	const expectedRune  rune   = 0
+	const expectedSize  int    = 0
+	const expectedError string = "Nil Reader"
+
+	var reader io.Reader // == nil
+
+	r, size, err := ReadRune(reader)
+
+	{
+		expected := expectedRune
+		actual   := r
+
+		if expected != actual {
+			t.Error("The actual 'rune value' is not what was expected.")
+			t.Logf("EXPECTED: %q (%U)", expected, expected)
+			t.Logf("ACTUAL:   %q (%U)", actual, actual)
+			t.Logf("RUNE: %q (%U)", r, r)
+			t.Logf("SIZE: %d", size)
+			t.Logf("ERROR: (%T) %s", err, err)
+			return
+		}
+	}
+
+	{
+		expected := expectedSize
+		actual   := size
+
+		if expected != actual {
+			t.Error("The actual 'size' is not what was expected.")
+			t.Logf("EXPECTED: %d", expected)
+			t.Logf("ACTUAL:   %d", actual)
+			t.Logf("RUNE: %q (%U)", r, r)
+			t.Logf("SIZE: %d", size)
+			t.Logf("ERROR: (%T) %s", err, err)
+			return
+		}
+	}
+
+	{
+		expected := expectedError
+		actual   := err.Error()
+
+		if expected != actual {
+			t.Error("The actual 'error' is not what was expected.")
+			t.Logf("EXPECTED: %q", expected)
+			t.Logf("ACTUAL:   %q", actual)
+			t.Logf("RUNE: %q (%U)", r, r)
+			t.Logf("SIZE: %d", size)
+			t.Logf("ERROR: (%T) %s", err, err)
+			return
+		}
+	}
+
+}
+
+func TestReadRune_emptyReader(t *testing.T) {
+
+	const expectedRune  rune   = 0
+	const expectedSize  int    = 0
+	const expectedError string = "EOF"
+
+	var reader io.Reader = strings.NewReader("")
+
+	r, size, err := ReadRune(reader)
+
+	{
+		expected := expectedRune
+		actual   := r
+
+		if expected != actual {
+			t.Error("The actual 'rune value' is not what was expected.")
+			t.Logf("EXPECTED: %q (%U)", expected, expected)
+			t.Logf("ACTUAL:   %q (%U)", actual, actual)
+			t.Logf("RUNE: %q (%U)", r, r)
+			t.Logf("SIZE: %d", size)
+			t.Logf("ERROR: (%T) %s", err, err)
+			return
+		}
+	}
+
+	{
+		expected := expectedSize
+		actual   := size
+
+		if expected != actual {
+			t.Error("The actual 'size' is not what was expected.")
+			t.Logf("EXPECTED: %d", expected)
+			t.Logf("ACTUAL:   %d", actual)
+			t.Logf("RUNE: %q (%U)", r, r)
+			t.Logf("SIZE: %d", size)
+			t.Logf("ERROR: (%T) %s", err, err)
+			return
+		}
+	}
+
+	{
+		expected := expectedError
+		actual   := err.Error()
+
+		if expected != actual {
+			t.Error("The actual 'error' is not what was expected.")
+			t.Logf("EXPECTED: %q", expected)
+			t.Logf("ACTUAL:   %q", actual)
+			t.Logf("RUNE: %q (%U)", r, r)
+			t.Logf("SIZE: %d", size)
+			t.Logf("ERROR: (%T) %s", err, err)
+			return
+		}
+	}
+
+}
