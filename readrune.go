@@ -5,7 +5,13 @@ import (
 )
 
 // ReadRune reads a single UTF-8 encoded Unicode character from an io.Reader,
-// and returns the Unicode character (as a Go rune) and the number of bytes read.
+// and returns the Unicode character (as a Go rune) and the size of the rune.
+//
+// Note that it returns the size-of-the-rune rather than the number-of-bytes-read.
+// This is to match what is described in the Go built-in package:
+//
+// “ReadRune reads a single encoded Unicode character and returns the rune and its size in bytes.
+// If no character is available, err will be set.”
 //
 // If ‘reader’ is nil then ReaderRune will return an error that matches utf8.NilReaderError.
 //
@@ -49,10 +55,10 @@ func ReadRune(reader io.Reader) (rune, int, error) {
 		n, err := reader.Read(p)
 		count += n
 		if nil != err {
-			return 0, count, err
+			return 0, 0, err
 		}
 		if 1 != n {
-			return 0, count, errInternalError
+			return 0, 0, errInternalError
 		}
 
 		b0 = buffer[0]
@@ -97,7 +103,7 @@ func ReadRune(reader io.Reader) (rune, int, error) {
 			more = 7-1
 
 		default:
-			return 0, count, errInternalError
+			return 0, 0, errInternalError
 		}
 	}
 
@@ -109,16 +115,15 @@ func ReadRune(reader io.Reader) (rune, int, error) {
 		n, err := reader.Read(p)
 		count += n
 		if nil != err {
-			return 0, count, err
+			return 0, 0, err
 		}
 		if more != n {
-			return 0, count, errInternalError
+			return 0, 0, errInternalError
 		}
 	}
 
 	var r rune
 	{
-
 		var b byte
 
 		switch {
@@ -154,7 +159,7 @@ func ReadRune(reader io.Reader) (rune, int, error) {
 			//b := (0xFF^0xFF) & b0
 
 		default:
-			return 0, count, errInternalError
+			return 0, 0, errInternalError
 		}
 
 		r = rune(b)
@@ -166,9 +171,8 @@ func ReadRune(reader io.Reader) (rune, int, error) {
 
 			// if 0b1000,0000 != (0b0b1100,0000 & bsi) {
 			if 0x80 != (0xC0 & bsi) {
-				return 0, count, errInvalidUTF8
+				return 0, 0, errInvalidUTF8
 			}
-
 
 			//  b := 0b0011,1111 & bsi
 			b := 0x3F & bsi
