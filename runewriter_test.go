@@ -1,7 +1,7 @@
 package utf8_test
 
 import (
-	"sourcecode.social/reiver/go-utf8"
+	"github.com/reiver/go-utf8"
 
 	"strings"
 

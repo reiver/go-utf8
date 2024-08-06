@@ -6,9 +6,9 @@ This package is meant to be a replacement for Go's built-in `"unicode/utf8"` pac
 
 ## Documention
 
-Online documentation, which includes examples, can be found at: http://godoc.org/sourcecode.social/reiver/go-utf8
+Online documentation, which includes examples, can be found at: http://godoc.org/github.com/reiver/go-utf8
 
-[![GoDoc](https://godoc.org/sourcecode.social/reiver/go-utf8?status.svg)](https://godoc.org/sourcecode.social/reiver/go-utf8)
+[![GoDoc](https://godoc.org/github.com/reiver/go-utf8?status.svg)](https://godoc.org/github.com/reiver/go-utf8)
 
 ## Reading a Single UTF-8 Character
 
